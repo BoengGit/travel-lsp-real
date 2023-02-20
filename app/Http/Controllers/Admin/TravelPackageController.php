@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\TravelPackageRequest;
 use App\Models\TravelPackages;
 use Illuminate\Http\Request;
