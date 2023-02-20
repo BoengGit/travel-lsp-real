@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\TravelPackageController;
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/detail/{slug}', [DetailController::class, 'index'])->name('detail');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
