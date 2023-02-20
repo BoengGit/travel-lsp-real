@@ -13,8 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('galleries', function (Blueprint $table) {
+        Schema::create('travel_packages', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('slug');
+            $table->string('location');
+            $table->longText('about');
+            $table->date('departure_date');
+            $table->string('duration');
+            $table->string('type');
+            $table->integer('price');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('galleries');
+        Schema::dropIfExists('travel_packages');
     }
 };
