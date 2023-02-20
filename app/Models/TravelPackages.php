@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class TravelPackages extends Model
 {
     use SoftDeletes;
-
     use HasFactory;
 
     protected $fillable = [
@@ -22,4 +21,9 @@ class TravelPackages extends Model
         'type',
         'price'
     ];
+
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'travel_packages_id', 'id');
+    }
 }

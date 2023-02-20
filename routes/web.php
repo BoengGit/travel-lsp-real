@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,7 @@ Route::get('/', function () {
 Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('/travel-packages', TravelPackageController::class);
-    // Route::resource('/galleries', GalleryController::class);
+    Route::resource('/galleries', GalleryController::class);
     // Route::resource('/transactions', TransactionController::class);
 });
 

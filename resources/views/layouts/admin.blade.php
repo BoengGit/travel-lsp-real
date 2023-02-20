@@ -40,7 +40,7 @@
                 <x-admin-nav-link :href="route('admin.travel-packages.index')" :active="request()->routeIs('admin.travel-packages.index')">
                     {{ __('Travel Packages') }}
                 </x-admin-nav-link>
-                <x-admin-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.galleries.index')">
+                <x-admin-nav-link :href="route('admin.galleries.index')" :active="request()->routeIs('admin.galleries.index')">
                     {{ __('Galleries') }}
                 </x-admin-nav-link>
                 <x-admin-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.transactions.index')">
