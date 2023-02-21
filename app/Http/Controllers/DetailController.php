@@ -9,10 +9,10 @@ class DetailController extends Controller
 {
     public function index($slug)
     {
-        $items = TravelPackages::with(['galleries'])
+        $item = TravelPackages::with(['galleries'])
             ->where('slug', $slug)
             ->firstOrFail();
 
-        return view('detail', compact('items'));
+        return view('detail', compact('item'));
     }
 }

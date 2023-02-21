@@ -43,7 +43,7 @@
                 <x-admin-nav-link :href="route('admin.galleries.index')" :active="request()->routeIs('admin.galleries.index')">
                     {{ __('Galleries') }}
                 </x-admin-nav-link>
-                <x-admin-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.transactions.index')">
+                <x-admin-nav-link :href="route('admin.transactions.index')" :active="request()->routeIs('admin.transactions.index')">
                     {{ __('Transactions') }}
                 </x-admin-nav-link>
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
